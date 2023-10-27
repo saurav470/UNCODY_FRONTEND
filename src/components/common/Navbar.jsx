@@ -62,8 +62,8 @@ function Navbar() {
                   <>
                     <div
                       className={`group relative flex cursor-pointer items-center gap-1 ${matchRoute("/catalog/:catalogName")
-                          ? "text-yellow-25"
-                          : "text-richblack-25"
+                        ? "text-yellow-25"
+                        : "text-richblack-25"
                         }`}
                     >
                       <p>{link.title}</p>
@@ -72,7 +72,7 @@ function Navbar() {
                         <div className="absolute left-[50%] top-0 -z-10 h-6 w-6 translate-x-[80%] translate-y-[-40%] rotate-45 select-none rounded bg-richblack-5"></div>
                         {loading ? (
                           <p className="text-center">Loading...</p>
-                        ) : subLinks.length ? (
+                        ) : subLinks?.length ? (
                           <>
                             {subLinks
                               ?.filter(
@@ -101,8 +101,8 @@ function Navbar() {
                   <Link to={link?.path}>
                     <p
                       className={`${matchRoute(link?.path)
-                          ? "text-yellow-25"
-                          : "text-richblack-25"
+                        ? "text-yellow-25"
+                        : "text-richblack-25"
                         }`}
                     >
                       {link.title}
