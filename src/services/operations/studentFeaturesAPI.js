@@ -4,11 +4,11 @@ import { apiConnector } from "../apiconnector";
 import rzpLogo from "../../assets/Logo/uncody.png"
 import { setPaymentLoading } from "../../slices/courseSlice";
 import { resetCart } from "../../slices/cartSlice";
-console.log(process.env.REACT_APP_BASE_URL);
+
 
 
 const { COURSE_PAYMENT_API, COURSE_VERIFY_API, SEND_PAYMENT_SUCCESS_EMAIL_API } = studentEndpoints;
-console.log(process.env.REACT_APP_RAZORPAY_KEY);
+
 
 function loadScript(src) {
     return new Promise((resolve) => {

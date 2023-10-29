@@ -46,6 +46,11 @@ function VerifyEmail() {
     );
   };
 
+  const resendHandel = (e) => {
+
+    dispatch(sendOtp(signupData.email, navigate))
+  }
+
   return (
     <div className="min-h-[calc(100vh-3.5rem)] grid place-items-center">
       {loading ? (
@@ -95,7 +100,7 @@ function VerifyEmail() {
             </Link>
             <button
               className="flex items-center text-blue-100 gap-x-2"
-              onClick={() => dispatch(sendOtp(signupData.email))}
+              onClick={(e) => resendHandel(e)}
             >
               <RxCountdownTimer />
               Resend it
