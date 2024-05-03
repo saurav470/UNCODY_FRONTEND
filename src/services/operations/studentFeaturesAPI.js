@@ -69,7 +69,7 @@ export async function buyCourse(token, courses, userDetails, navigate, dispatch)
                 verifyPayment({ ...response, courses }, token, navigate, dispatch);
             }
         }
-        //miss hogya tha 
+
         const paymentObject = new window.Razorpay(options);
         paymentObject.open();
         paymentObject.on("payment.failed", function (response) {
@@ -101,6 +101,7 @@ async function sendPaymentSuccessEmail(response, amount, token) {
 }
 
 //verify payment
+
 async function verifyPayment(bodyData, token, navigate, dispatch) {
     const toastId = toast.loading("Verifying Payment....");
     dispatch(setPaymentLoading(true));

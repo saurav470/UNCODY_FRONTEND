@@ -29,14 +29,18 @@ import ViewCourse from "./pages/ViewCourse";
 import VideoDetails from "./components/core/ViewCourse/VideoDetails";
 import Instructor from "./components/core/Dashboard/InstructorDashboard/Instructor";
 
+
 function App() {
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  
+
+
   const { user } = useSelector((state) => state.profile)
 
-
+const a=()=>{
+  navigate("/")
+}
   return (
    <div className="w-screen min-h-screen bg-richblack-900 flex flex-col font-inter">
     <Navbar/>

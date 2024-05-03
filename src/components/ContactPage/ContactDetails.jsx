@@ -24,6 +24,7 @@ const contactDetails = [
     details: "+123 456 7869",
   },
 ]
+const a="dovpj"
 
 const ContactDetails = () => {
   return (
