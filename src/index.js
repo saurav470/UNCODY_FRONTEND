@@ -29,11 +29,9 @@ const startApp = () => {
   );
 };
 
-if (!window.cordova) {
-  startApp();
-} else {
-  document.addEventListener('deviceready', startApp, false);
-}
+
+startApp();
+
 
 reportWebVitals();
 

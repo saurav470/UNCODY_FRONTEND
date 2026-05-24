@@ -59,8 +59,15 @@ export async function buyCourse(token, courses, userDetails, navigate, dispatch)
             description: "Thank You for Purchasing the Course",
             image: rzpLogo,
             prefill: {
-                name: `${userDetails.firstName}`,
-                email: userDetails.email
+                name: `${userDetails.firstName} ${userDetails.lastName || ""}`.trim(),
+                email: userDetails.email,
+                contact: userDetails.contactNumber || userDetails.phone || ""
+            },
+            notes: {
+                address: "Uncody Online Course Purchase"
+            },
+            theme: {
+                color: "#3399cc"
             },
             handler: function (response) {
                 //send successful wala mail
